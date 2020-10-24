@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/manhinh_main"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/head"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btupdate"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Cập nhập"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:padding="10dp"
+            android:textSize="19dp"
+            android:drawableStart="@drawable/ic_update"
+            android:background="@drawable/round_border"
+            android:textColor="#fff"
+            android:textAllCaps="false"/>
+       <LinearLayout
+           android:layout_marginTop="15dp"
+           android:layout_gravity="center"
+           android:gravity="center"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+           <EditText
+               android:id="@+id/edtsua"
+               android:layout_width="270dp"
+               android:layout_height="wrap_content"
+               android:visibility="gone"/>
+           <Button
+               android:textAllCaps="false"
+               android:id="@+id/btsua"
+               android:background="#fff"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:visibility="gone"
+               android:text="Sửa"/>
+       </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:id="@+id/content"
+        android:layout_below="@+id/head"
+        android:layout_width="match_parent"
+        android:padding="15dp"
+        android:layout_height="wrap_content">
+        <ListView
+            android:scrollbars="none"
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/round_border"
+            android:elevation="5dp" />
+    </LinearLayout>
+</RelativeLayout>
